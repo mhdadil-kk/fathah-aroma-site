@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathah Aroma | Elegance in Every Drop</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #86a392;
+            color: #ffffff;
+            padding-top: 80px;
+        }
+
+        .brand-logo {
+            max-width: 150px;
+        }
+
+        .btn-primary {
+            background-color: #ffffff;
+            color: #4a6650;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #4a6650;
+            color: #ffffff;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 500px;
+            touch-action: pan-y;
+        }
+        header {
+    transition: transform 0.3s ease-in-out;
+}
+
+        .nav-link {
+            position: relative;
+            color: white;
+            transition: all 0.3s ease-in-out;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #ffdb58;
+            transform: scale(1.1);
+        }
+
+        /* Mobile Menu Styling */
+        #mobile-menu a {
+            display: block;
+            padding: 10px;
+            font-size: 1.2rem;
+            transition: background 0.3s ease-in-out;
+        }
+
+        #mobile-menu a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-[#86a392] text-white">
+    <header class="fixed top-0 left-0 w-full z-50 p-4 backdrop-blur-lg bg-white/10 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6 py-3 rounded-xl">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <img src="./assets/logo.jpg" alt="Fathah Aroma Logo" class="w-32">
+            </a>
+
+            <!-- Navbar Links -->
+            <nav id="menu" class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="text-white text-3xl md:hidden focus:outline-none">☰</button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute w-full top-[70px] left-0 bg-[#4a6650] text-white text-center py-4 space-y-4">
+            <a href="#features" class="block">Features</a>
+            <a href="#about" class="block">About</a>
+            <a href="#contact" class="block">Contact</a>
+        </div>
+    </header>
+
+
+
+    <section class="text-center py-20 pt-32">
+        <h2 class="text-5xl font-bold">Elegance in Every Drop</h2>
+        <p class="mt-4 text-lg text-gray-200">Immerse yourself in the essence of luxury with Fathah Aroma.</p>
+        <a href="#shop" class="btn-primary inline-block mt-6">Shop Now</a>
+    </section>
+
+
+    <div class="flex justify-center items-center py-10">
+        <model-viewer src="./assets/Fragrant_Elegance_0320171340_texture.glb" alt="Perfume Bottle" auto-rotate
+            camera-controls ar class="max-w-[400px] w-full h-[600px] touch-pan-y"></model-viewer>
+    </div>
+
+    <section id="features" class="p-12 text-center bg-gray-900 text-white">
+        <h3 class="text-4xl font-bold mb-8">Why Choose Fathah Aroma?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 bg-[#4a6650] rounded-xl shadow-xl hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-bold">Exquisite Fragrances</h4>
+                <p class="text-gray-300 mt-2">Crafted with the finest ingredients for a signature scent.</p>
+            </div>
+            <div class="p-8 bg-[#4a6650] rounded-xl shadow-xl hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-bold">Timeless Elegance</h4>
+                <p class="text-gray-300 mt-2">Designed to complement your sophisticated lifestyle.</p>
+            </div>
+            <div class="p-8 bg-[#4a6650] rounded-xl shadow-xl hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-bold">Sustainable Luxury</h4>
+                <p class="text-gray-300 mt-2">Eco-friendly packaging and cruelty-free production.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="p-12 text-center bg-[#4a6650] text-white">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-4xl font-bold">About Fathah Aroma</h3>
+            <p class="text-lg text-gray-300 mt-6 leading-relaxed">
+                At Fathah Aroma, we redefine luxury with timeless, elegant fragrances that reflect your unique identity. Our perfumes are crafted with precision, ensuring a blend of sophistication and lasting impressions.
+            </p>
+        </div>
+    </section>
+    
+    <section id="contact" class="p-12 text-center bg-gray-900 text-white">
+        <h3 class="text-4xl font-bold">Contact Us</h3>
+        <p class="text-lg text-gray-300 mt-4">Have questions? We'd love to hear from you!</p>
+        <a href="mailto:" class="mt-4 inline-block px-6 py-3 bg-[#4a6650] text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition">Email Us</a>
+    </section>
+    <footer class="bg-[#4a6650] text-center p-6 mt-10">
+        <p>&copy; 2025 Fathah Aroma. All Rights Reserved.</p>
+    </footer>
+</body>
+<script>document.querySelector('model-viewer').addEventListener('wheel', (event) => {
+        if (event.ctrlKey) {
+            event.preventDefault(); // Prevent zooming with Ctrl + Scroll
+        }
+    }, { passive: false });
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+    });
+    let lastScrollTop = 0;
+const navbar = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Scrolling Down - Hide Navbar
+        navbar.style.transform = "translateY(-100%)";
+    } else {
+        // Scrolling Up - Show Navbar
+        navbar.style.transform = "translateY(0)";
+    }
+
+    lastScrollTop = scrollTop;
+});
+
+
+</script>
+
+</html>
